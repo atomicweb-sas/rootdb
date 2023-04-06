@@ -1,4 +1,5 @@
-![RootDB](https://www.rootdb.fr/assets/logo_name_blue_500x250.png)
+
+[![npm downloads](https://www.rootdb.fr/assets/logo_name_blue_500x250.png)]()
 
 # RootDB
 
