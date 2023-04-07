@@ -4,7 +4,7 @@
 # RootDB
 
 * [RootDB](https://www.rootdb.fr) is a self-hosted reporting webapp.
-* This repository contains the definition of the official docker images and an installation script to help you install it without docker.
+* This repository contains the definition of the official docker images available on [dockerhub](https://github.com/atomicweb-sas) and an installation script to help you install it without docker.
 * Consult the documentation to setup RootDB with :
   * [Docker](https://documentation.rootdb.fr/install/install_with_docker.html) 
   * [Without Docker](https://documentation.rootdb.fr/install/install_without_docker.html) 
