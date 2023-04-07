@@ -4,7 +4,15 @@
 # RootDB
 
 * [RootDB](https://www.rootdb.fr) is a self-hosted reporting webapp.
+* This repository contains the definition of the official docker images.
+* Consult the [documentation](https://documentation.rootdb.fr/install/install_with_docker.html) to check how to use them.
+* You can use this repository for bug report or features request.
+
+## Support
 * Please consult the [roadmap](https://forum.rootdb.fr/d/6-roadmap) to know what is planned for the next releases.
+* [Q&A](https://www.rootdb.fr/faqs)
+* [forum](https://forum.rootdb.fr)
+* [Discord](https://discord.gg/guKvGJAqZm)
 
 ## Features
 
@@ -32,10 +40,5 @@
 
 
 
-# Github repository
-
-* This repository contains the definition of the official docker images.
-* Consult the [documentation](https://documentation.rootdb.fr/install/install_with_docker.html) to check how to use it.
-* You can use this repository for bug report or features request.
 
 
