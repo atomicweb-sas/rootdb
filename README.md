@@ -13,8 +13,8 @@
 ## Support
 * Please consult the [roadmap](https://forum.rootdb.fr/d/6-roadmap) to know what is planned for the next releases.
 * [Q&A](https://www.rootdb.fr/faqs)
-* [forum](https://forum.rootdb.fr)
-* [Discord](https://discord.gg/guKvGJAqZm)
+* Community forum: [forum.rootdb.fr](https://forum.rootdb.fr)
+* Discord: [join server](https://discord.gg/guKvGJAqZm)
 
 ## Features
 
