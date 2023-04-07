@@ -1,0 +1,43 @@
+FROM bitnami/minideb:latest
+
+ENV TIMEZONE=Europe/Paris
+
+COPY rootdb/supervisord.conf /etc/
+COPY rootdb/supervisor.d /etc/supervisor.d/
+COPY rootdb/supervisor.d /etc/supervisor.d/
+
+
+RUN install_packages ca-certificates curl apt-transport-https software-properties-common wget  lsb-release \
+    && curl -o /usr/local/bin/semver "https://raw.githubusercontent.com/fsaintjacques/semver-tool/master/src/semver" \
+    && chmod +x /usr/local/bin/semver \
+    && curl -sSL https://packages.sury.org/php/README.txt | bash -x \
+    && install_packages memcached \
+    bzip2 \
+    gawk \
+    iputils-ping \
+    iproute2 \
+    jq \
+    mariadb-client \
+    nmap \
+    procps \
+    php8.1 \
+    php8.1-curl \
+    php8.1-dom \
+    php8.1-fpm \
+    php8.1-iconv \
+    php8.1-mbstring \
+    php8.1-memcached \
+    php8.1-mysql \
+    supervisor \
+    unzip
+
+
+COPY rootdb/php/8.1/fpm/pool.d/www.conf /etc/php/8.1/fpm/pool.d/www.conf
+COPY rootdb/php/8.1/fpm/php.ini /etc/php/8.1/fpm/php.ini
+COPY rootdb/php/8.1/fpm/php-fpm.conf /etc/php/8.1/fpm/php-fpm.conf
+COPY rootdb/php/8.1/cli/php.ini /etc/php/8.1/cli/php.ini
+COPY rootdb/php/sourceguardian_loader_13.0.3/ixed.8.1.lin /usr/lib/php/20210902/ixed.8.1.lin
+
+
+# Expose port 9000 and start php-fpm server.
+EXPOSE 9000

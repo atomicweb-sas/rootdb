@@ -1,0 +1,30 @@
+FROM atomicwebsas/rootdb-php-fpm:8.1
+
+ARG UID
+ARG GID
+ARG VERSION
+
+# To get variables defined in .env file in the docker-entrypoint file.
+# And not add _all_ these variable in docker-compose.yml
+ENV VERSION=$VERSION
+ENV UID=$UID
+ENV GID=$GID
+
+
+RUN : "${UID:?argument not provided.}"
+RUN : "${GID:?argument not provided.}"
+RUN : "${VERSION:?argument not provided.}"
+
+COPY rootdb/docker-entrypoint.sh /usr/local/bin/
+COPY rootdb/setup_rootdb.sh /usr/local/bin/
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+
+WORKDIR /var/www/
+
+#USER rootdb
+
+#CMD ["php-fpm8.1", "-F"]
+
+EXPOSE 6001/tcp
+EXPOSE 9000/tcp
