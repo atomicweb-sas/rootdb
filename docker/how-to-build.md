@@ -1,6 +1,8 @@
 # Build images
 
 ```bash
+cd docker
+
 docker build --compress --force-rm --no-cache -t rootdb-memcached:latest -f ./Dockerfile_memcached .
 docker build --compress --force-rm --no-cache -t rootdb-php-fpm:8.1 -f ./Dockerfile_php_fpm_8_1 .
 docker build --compress --force-rm --no-cache -t rootdb-nginx:latest -f ./Dockerfile_nginx .
@@ -10,6 +12,8 @@ docker build --compress --force-rm --no-cache --build-arg VERSION=latest --build
 # Push images on dockerhub
 
 ```bash
+cd docker
+
 docker tag rootdb-memcached:latest atomicwebsas/rootdb-memcached:latest
 docker push atomicwebsas/rootdb-memcached:latest
 
