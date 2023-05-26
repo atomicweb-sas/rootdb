@@ -19,7 +19,7 @@
 ## Features
 
 - Multi-reports - several reports can be opened in the same tab of your web browser.
-- Multi-connectors - you can configure and use multiple database connections for your reports. (only MySQL / MariaDB, but more are planned)
+- Multi-connectors - you can configure and use multiple database connections for your reports. (MySQL, MariaDB, PostgreSQL but more are planned)
 - Generation of listings :
     - simple and practical dynamic table configurator.
     - create links to other reports.

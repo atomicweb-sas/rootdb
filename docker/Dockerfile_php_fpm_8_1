@@ -28,6 +28,8 @@ RUN install_packages ca-certificates curl apt-transport-https software-propertie
     php8.1-mbstring \
     php8.1-memcached \
     php8.1-mysql \
+    php8.1-pgsql \
+    postgresql-client-common \
     supervisor \
     unzip
 
